@@ -1,0 +1,11 @@
+{
+  "model": "grok-4.7-high-fast",
+  "tokens_in": null,
+  "tokens_out": null,
+  "usd": null,
+  "wall_s": null,
+  "compile_ok": true,
+  "tests_passed": 20,
+  "tests_failed": [],
+  "cloudagent_id": "bc-ca88a573-322a-5e24-9bb5-a01491632414"
+}

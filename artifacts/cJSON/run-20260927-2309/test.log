@@ -1,0 +1,86 @@
+   Compiling cjson v1.7.19 (/workspace)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.28s
+     Running unittests src/lib.rs (target/debug/deps/cjson-0ca2202df741112a)
+
+running 1 test
+test hooks::tests::malloc_uses_the_installed_hook ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/cjson_print.rs (target/debug/deps/cjson_print-4f87efbacf178a57)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/public_api.rs (target/debug/deps/public_api-3fcb6476ff0002fa)
+
+running 19 tests
+test array_insert_replace_and_delete ... ok
+test create_array_from_numbers ... ok
+test detach_object_item_keeps_the_rest ... ok
+test builders_match_print ... ok
+test duplicate_and_compare ... ok
+test const_key_flag_is_visible ... ok
+test escaped_string_round_trip ... ok
+test formatted_object_uses_tabs ... ok
+test minify_drops_space_and_comments_and_keeps_strings ... ok
+test non_number_get_is_nan_and_missing_index_is_absent ... ok
+test parse_prints_string_array_and_object ... ok
+test print_buffer_helpers ... ok
+test parse_prints_scalars ... ok
+test reject_truncated_container_without_panic ... ok
+test require_null_terminated_rejects_trailing_junk ... ok
+test set_helpers_change_printed_value ... ok
+test string_reference_refuses_set_and_still_prints ... ok
+test unicode_escape_prints_utf8 ... ok
+test version_is_the_vendored_release ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests cjson
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+exit_code=0
+
+---- differential ----
+canonical form: cJSON_PrintUnformatted bytes. Compact JSON with no space after ':' or ','.
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.00s
+PASS differential/fixtures/01-null.json
+PASS differential/fixtures/02-true.json
+PASS differential/fixtures/03-false.json
+PASS differential/fixtures/04-zero.json
+PASS differential/fixtures/05-one.json
+PASS differential/fixtures/06-neg.json
+PASS differential/fixtures/07-float.json
+PASS differential/fixtures/08-exp.json
+PASS differential/fixtures/09-big.json
+PASS differential/fixtures/10-string.json
+PASS differential/fixtures/11-empty-string.json
+PASS differential/fixtures/12-escaped.json
+PASS differential/fixtures/13-unicode.json
+PASS differential/fixtures/14-control.json
+PASS differential/fixtures/15-empty-array.json
+PASS differential/fixtures/16-empty-object.json
+PASS differential/fixtures/17-array.json
+PASS differential/fixtures/18-object.json
+PASS differential/fixtures/19-nested.json
+PASS differential/fixtures/20-ws.json
+PASS differential/fixtures/21-dup-keys.json
+PASS differential/fixtures/22-deep.json
+PASS differential/fixtures/23-slash.json
+PASS differential/fixtures/24-negzero.json
+PASS differential/fixtures/25-pi.json
+PASS differential/fixtures/26-mixed.json
+PASS differential/fixtures/27-bom.json
+PASS differential/fixtures/upstream/cjson-utils-tests.json
+PASS differential/fixtures/upstream/package.json
+PASS differential/fixtures/upstream/spec_tests.json
+PASS differential/fixtures/upstream/tests.json
+pass=31 fail=0 panic=0
+differential_exit_code=0
+byte_identical: yes. Rust print_unformatted matched cJSON_PrintUnformatted on every fixture.
+miri: skipped. cargo miri reports that the miri component is not available for the 1.83.0 toolchain.

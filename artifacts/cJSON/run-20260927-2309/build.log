@@ -1,0 +1,4 @@
+   Compiling libc v0.2.189
+   Compiling cjson v1.7.19 (/workspace)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.95s
+exit_code=0
